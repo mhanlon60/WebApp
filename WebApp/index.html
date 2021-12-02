@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CollegeWebApp</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  
+  <script>
+
+      function storeUser(){
+    var user = document.forms["loginform"]["username"].value;
+     var password = document.forms["loginform"]["password"].value;
+
+     alert("Checking Storage");
+
+     if(typeof(Storage) !== "undefined"){
+       localStorage.setItem("username", user);
+       
+       localStorage.setItem("passWord", password);
+
+       document.getElementById("testresult").innerHTML = "USERNAME AND PASSWORD STORED";
+       
+     }
+     else{
+   
+     }
+}
+
+
+   
+    </script>
+
+    <script>function moveOn(){
+    
+
+    user = document.forms["loginform"]["username"].value;
+      password = document.forms["loginform"]["password"].value;
+
+     storeName = localStorage.getItem("username");
+ storePass = localStorage.getItem("passWord");
+
+ if(user == "admin" && password == "123"){
+   this.open("HTML/Calculator.html");
+  
+ }
+ else if(user == storeName && password == storePass){
+    window.open("HTML/Calculator.html");
+ }
+ else {
+   document.getElementById("testresult").innerHTML = "Not equal";
+
+
+ }
+ 
+}
+
+</script>
+  <body>
+   <centresection>
+    <div id = "signinlogo"><img src = "WebApp logo.png" width="320px" height = "250px"></div>
+<formbody>
+    <form name = "loginform">
+       <p class = "titleTxt">  Username</p><br>
+       <input type="text" placeholder="Enter Username" name="username" class = "input" required>
+<br><br>
+     <p class = "titleTxt">  Password</p><br>
+      <input type="password"  placeholder="Enter Password" name="password" class = "input" required> 
+<br>
+    
+<br>
+       <button type="submit" onclick = "storeUser()" class="btn">Sign Up</button>
+       <br><br>
+         
+       <button type="submit" onclick = "moveOn()" class="btn" id = "Signin" >Sign In</button>
+
+    </form>
+    <p hidden id = "page2url"><a href = "page2.html">Page2</a></p>
+
+  
+</formbody>
+   </centresection>
+  </body>
+</html>

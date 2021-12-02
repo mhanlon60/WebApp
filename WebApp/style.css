@@ -1,0 +1,234 @@
+centresection{background-size: width/2;text-align:center; float: middle;}
+
+formbody{ display: block;   margin-left: 100px; margin-right: 100px; padding: 50px; background-color: turquoise;  border: 1px solid #000;}
+
+
+.btn{
+   background-color: #ffa500; /* Orange */
+  
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 1px solid #000;
+}
+#Signin{padding:15px 19px;}
+
+.titleTxt{font-size: 20px;
+  background-color: lightblue;
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  clear: both ;
+  }
+
+.outText{
+width: 74%;
+  height: 100px;
+  background: aqua;
+  margin: 50px; margin-top: -30px;
+  border: 1px solid #000;
+  
+  clear: both;
+
+}
+
+#outText{
+  
+  color: gray;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  display: block;
+}
+
+
+  body{background-color: orange; width: 500px; height: 200px;}
+
+  nav ul {list-style-type:none}
+nav{clear: both; margin:33%; margin-bottom: 10px; }
+a {color: #000}
+nav ul li {float:left; width:120px; text-align:center;}
+nav ul li a {display : block;padding: 10px; border: 1px solid#000; background-color: lightcoral; width: 90%}
+nav ul li a:hover {background-color:#edd9c0; color: #7d4627}
+
+#SignInLink{
+  width:87.8%;
+  clear: both;
+}
+
+header {  background-color: grey; border: 1px solid #000; margin-right: 10px;}
+header, nav, main{margin:10px; }
+
+#CalculateHeader{float: right; font-size: 30px; padding: 20px; display : block; color:#ffa500;}
+#calcbanner{padding: 10px;}
+
+#calculatorform{width: 74%;
+  height: 500px;
+  background: aqua;
+  margin: 50px;
+  border: 1px solid #000;
+  
+  clear: both;}
+
+    salaryform{ 
+      width : 13%; 
+     float: left;
+     margin-left: 150px;
+    
+    }
+
+    #hours{margin-left: 50px;}
+    #salary{margin-left: 50px;}
+
+  hoursform{    width: 13%;
+  height: 200px;
+  float: left;
+ margin-left: 10px;
+ }
+
+ #buttons{float:none;
+  margin-left:10px;
+  margin-top: 50px; 
+ clear: both; 
+ background-color: lightblue; /* Orange */
+ border: 1px solid #000;
+  padding: 15px 15px;
+  text-align: center;
+  display: inline-block;
+ 
+  
+  }
+
+  .button2{
+    background-color: #ffa500; /* Orange */
+ border: 1px solid #000;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  }
+
+#calcbtn{margin-left: px;}
+#clearbtn{margin-left: px;}
+
+
+.container{
+  background-color: #12121f;
+  width : 75%;
+  margin-left : 9.25%;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar{
+  width: 45rem;
+  height: 52rem;
+  box-shadow: 0,5rem 3rem rgba(0,0,0,0.4);
+}
+
+.month{
+  width : 83%;
+  height:12rem;
+  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  color: #ffa500;
+  text-align: center;
+  text-shadow: 0 0 3 rem 0.5rem rgba(0,0,0,0.5);
+    border: 1px solid #000;
+
+}
+
+.month i {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color:white;
+}
+
+i{
+   font-size: 2.5rem;
+  cursor: pointer;
+  color:white;
+}
+
+.leftbanner{
+
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+
+}
+
+.month h1{
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.month p {
+  font-size: 1.6rem;
+}
+
+.weekdays{
+  width: 100%;
+  height : 5rem;
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.weekdays div{
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+ text-shadow:0 0.3rem 0.5rem rgba(0,0,0,0.5))
+}
+
+.days{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.2rem;
+}
+
+.days div{
+  margin-left: 3px;
+  width : calc(40.2rem/13);
+  height:5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0.3rem 0.5rem rgba(0,0,0,0.5);
+  transition: background-color 0.2s;
+}
+
+.days div:hover:not(.today){
+  background-color: #262626;
+  border:0.2rem solid #777;
+  cursor: pointer;
+}
+
+.prev-date, .next-date{
+  opacity: 0.5;
+}
+
+.today{
+  background-color: #167e56;
+}

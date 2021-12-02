@@ -1,0 +1,14 @@
+PHP Integration with database (Use XAMPP) instead of local storage
+Revamp colour scheme
+Make new logos
+Add some new pages (ideas needed)
+
+Must - Store Username and Password.
+       Use PHP to integrate With database using XAMPP
+       Run on localhost/phpmyadmin
+       
+Should - Have a mySQL database that stores log in details
+
+Could - Have new logos, new colour scheme, Have a page that allows you to take notes
+
+Won't - Change any pre-existing pages

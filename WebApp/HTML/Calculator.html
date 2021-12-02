@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name ="viewport" content="width=device-width">
+<title>Calculator</title>
+
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<script>
+
+function storeInput() {
+
+
+var pay = parseInt(document.forms["calculatorform"]["payRate"].value);
+var hours = parseInt(document.forms["calculatorform"]["weeklyHours"].value);
+
+if (typeof(Storage) !== "undefined") {
+
+if (pay !== ""){
+localStorage.setItem("payRate", pay);
+}
+
+
+if (hours !== "" ){
+
+var Hourscount = (hours * 1);
+var totalHours = Hourscount;
+localStorage.setItem("totalHours", totalHours);
+
+}
+
+}
+ 
+
+
+else {
+
+}
+}
+
+function addHours(){
+  
+  var addedhours = parseInt(document.forms["calculatorform"]["weeklyHours"].value);
+  totalHours = ((addedhours * 1) + (localStorage.getItem("totalHours") * 1));
+  localStorage.setItem("totalHours", totalHours);
+
+}
+
+
+function calcPay(){
+
+var savedPay = localStorage.getItem("payRate");
+var totalHours = localStorage.getItem("totalHours");
+
+if (savedPay !== null && totalHours !== null )
+{
+basicPay = savedPay * totalHours;
+document.getElementById("outText").innerHTML = "Your pay is £" + basicPay;
+}
+
+}
+
+function clearStorage() {
+ 
+
+ var zero = 0
+ localStorage.setItem("payRate", zero);
+ localStorage.setItem("totalHours", zero);
+ }
+
+  </script>
+<body>
+<page>
+<!-- Page Header -->
+<header>
+<h1 id = "CalculateHeader">Calculate your Cash</h1>
+<img id="calcbanner" src="../WebApp logo.png" width="100px">
+</header>
+
+<div id = "beneathheader">
+<!-- Navigation Bar -->
+<nav>
+<ul>
+<li id = "SignInLink"><a href="../index.html"> Sign In    </a></li>
+<li><a href="Calculator.html"> Calculator   </a></li>
+<li><a href="Calendar.html"> Calendar    </a></li>
+<li><a href= "Notes.html"> Notes </a></li>
+
+</ul>
+</nav>
+
+<calcform>
+    <form id = "calculatorform" >
+      <hoursform>
+       <p id = "hours">   Hours</p>
+       <input type="text" placeholder="Enter Hours Worked" name="weeklyHours" class = "input" size = "15" >
+      </hoursform>
+
+<salaryform>
+     <p id = "salary">Rate</p>
+      <input id = "password input" type="text"  placeholder="Enter Pay Rate" name="payRate" class = "input" size = "15" > 
+</salaryform>
+
+<div id = "buttons">
+<button class="button2" onclick="storeInput()">Submit RATE and HOURS</button>
+<br><br>
+<button class="button2" id = "addbtn" onclick="addHours()">Add Hours</button>
+<br><br>
+<button class="button2" type = "button" id="calcbtn" onclick="calcPay()"> Calculate PAY</button><br>
+<br>
+<button class="button2" id = "clearbtn" onclick="clearStorage()">Clear Storage</button>
+
+</div>
+    </form>
+    
+</calcform>
+<div class="outText">
+<p id="outText" style="text-align: center"></p>
+
+</div>
+<br>
+
+</div>
+
+
+
+</page>
+  </body>
+</html>
